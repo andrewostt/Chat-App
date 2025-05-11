@@ -1,133 +1,102 @@
-# Real-Time Chat Application
+# Chat Application
 
-Современное веб-приложение для обмена сообщениями в реальном времени с поддержкой нескольких чат-комнат.
+## Authors
+- **Андрей Остапченко** - Tech Lead
+- **Андрей Остапченко** - Backend Developer
+- **Андрей Остапченко** - Frontend Developer
 
-## Основные возможности
+## Project Overview
+A modern real-time chat application with multiple chat rooms, built using React, Node.js, and WebSocket technology.
 
-- Регистрация пользователей по имени
-- Создание и управление чат-комнатами
-- Обмен сообщениями в реальном времени
-- Темная тема с фиолетовыми акцентами
-- Адаптивный дизайн
-- Отображение времени отправки сообщений
-- Просмотр последнего сообщения в списке чатов
+## Key Features
+- Real-time messaging using WebSocket
+- Multiple chat rooms
+- User authentication
+- Modern UI with dark theme
+- Responsive design
+- Message history
+- User presence indicators
 
-## Технологический стек
+## Tech Stack
 
 ### Frontend
-- React 18 с TypeScript
-- Chakra UI для компонентов и стилизации
-- React Router для навигации
-- Socket.IO Client для real-time коммуникации
-- Axios для HTTP запросов
-- Vite как сборщик проекта
+- React 18 with TypeScript
+- Chakra UI for components
+- React Router for navigation
+- Socket.IO Client for real-time communication
+- Axios for HTTP requests
+- Vite as build tool
 
 ### Backend
-- Node.js с Express
+- Node.js with Express
 - TypeScript
-- PostgreSQL как основная база данных
-- Prisma ORM для работы с базой данных
-- Socket.IO для real-time коммуникации
-- Jest для тестирования
+- PostgreSQL database
+- Prisma ORM
+- Socket.IO for WebSocket
+- Jest for testing
 
-## Структура проекта
-
+## Project Structure
 ```
-chat-app/
-├── client/                 # Frontend React приложение
+project/
+├── client/                 # React frontend
 │   ├── src/
-│   │   ├── components/    # React компоненты
-│   │   ├── context/      # React контексты
-│   │   └── theme.ts      # Настройки темы
-│   └── package.json
-│
-├── server/                # Backend Node.js приложение
-│   ├── src/
-│   │   ├── controllers/  # Контроллеры
-│   │   ├── routes/      # Маршруты API
-│   │   ├── tests/       # Тесты
-│   │   └── index.ts     # Точка входа
-│   ├── prisma/          # Схема базы данных
-│   └── package.json
-│
-└── README.md
+│   │   ├── components/    # React components
+│   │   ├── context/       # React contexts
+│   │   └── ...
+│   └── ...
+└── server/                # Node.js backend
+    ├── src/
+    │   ├── controllers/   # Route controllers
+    │   ├── models/        # Data models
+    │   ├── routes/        # API routes
+    │   └── ...
+    └── ...
 ```
 
-## Требования
-
-- Node.js (v16 или выше)
+## Requirements
+- Node.js (v14 or higher)
 - PostgreSQL
-- npm или yarn
+- npm or yarn
 
-## Установка и запуск
+## Installation and Running
 
-### 1. Клонирование репозитория
+1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd chat-app
+git clone https://github.com/andrewostt/Chat-App.git
+cd Chat-App
 ```
 
-### 2. Настройка базы данных
-```bash
-# Создание базы данных
-createdb chat_app
-
-# Копирование примера конфигурации
-cp server/.env.example server/.env
-
-# Редактирование .env файла с вашими настройками PostgreSQL
-```
-
-### 3. Настройка и запуск сервера
+2. Set up the database:
 ```bash
 cd server
-
-# Установка зависимостей
 npm install
+npx prisma migrate dev
+```
 
-# Генерация Prisma клиента
-npm run prisma:generate
-
-# Применение миграций базы данных
-npm run prisma:migrate
-
-# Заполнение базы тестовыми данными
-npm run seed
-
-# Запуск сервера
+3. Start the server:
+```bash
 npm run dev
 ```
 
-### 4. Настройка и запуск клиента
+4. In a new terminal, start the client:
 ```bash
 cd client
-
-# Установка зависимостей
 npm install
-
-# Запуск клиента
 npm run dev
 ```
 
-После выполнения всех шагов:
-- Backend будет доступен по адресу: http://localhost:3001
-- Frontend будет доступен по адресу: http://localhost:5173 (или другой порт, который укажет Vite)
+## Usage
+1. Open your browser and navigate to `http://localhost:5173`
+2. Enter your username
+3. Select a chat room
+4. Start chatting!
 
-## Использование
-
-1. Откройте приложение в браузере
-2. Введите свое имя на главном экране
-3. Выберите чат-комнату из списка
-4. Начните общение!
-
-## Тестирование
-
-### Запуск тестов на сервере
+## Testing
+Run tests for the server:
 ```bash
 cd server
 npm test
 ```
 
-## Лицензия
-
-MIT 
+## License
+This project is licensed under the MIT License. 
