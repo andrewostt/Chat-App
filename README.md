@@ -8,6 +8,24 @@
 ## Project Overview
 A modern real-time chat application with multiple chat rooms, built using React, Node.js, and WebSocket technology.
 
+## Screenshots
+
+### Set Username
+![Set Username](imgs/Set_Username.png)
+*Initial screen where users set their username*
+
+### Main Screen
+![Main Screen](imgs/Main.png)
+*Main screen showing available chat rooms*
+
+### General Chat
+![General Chat](imgs/General_Chat.png)
+*General chat room interface*
+
+### Tech Discussion
+![Tech Discussion](imgs/Tech_Discussion.png)
+*Tech discussion chat room interface*
+
 ## Key Features
 - Real-time messaging using WebSocket
 - Multiple chat rooms
